@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+const PREFIX = process.env.NEXT_BASE_PATH || ''
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -61,7 +63,7 @@ const Home: NextPage = () => {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <img src={ PREFIX.concat('/vercel.svg') } alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
