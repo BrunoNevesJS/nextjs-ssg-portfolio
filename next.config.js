@@ -1,4 +1,4 @@
 module.exports = {
-  basePath: '/nextjs-ssg-portfolio',
-  assetPrefix: '/nextjs-ssg-portfolio'
+  basePath: process.env.NEXT_BASE_PATH,
+  assetPrefix: process.env.NEXT_BASE_PATH
 }
