@@ -7,6 +7,8 @@ const nextConfig = {
     disableStaticImages: true,
   },
   reactStrictMode: true,
+  basePath: '/nextjs-ssg-portfolio',
+  assetPrefix: '/nextjs-ssg-portfolio'
 };
 
 const config = withPlugins(
