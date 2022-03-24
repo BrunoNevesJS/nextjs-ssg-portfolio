@@ -1,6 +1,25 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const optimizedImages = require('next-optimized-images');
+const withPlugins = require('next-compose-plugins');
 
-module.exports = nextConfig
+const nextConfig = {
+  images: {
+    disableStaticImages: true,
+  },
+  reactStrictMode: true,
+};
+
+const config = withPlugins(
+  [
+    [
+      optimizedImages,
+      {
+        optimizeImages: false,
+      },
+    ],
+  ],
+  nextConfig
+);
+
+
+module.exports = config
