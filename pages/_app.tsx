@@ -1,18 +1,16 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Head from 'next/head';
+import { ThemeProvider } from 'styled-components';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+import GlobalStyles from '../styles/global/global'
+import theme from '../styles/theme/theme';
+
+export default function MyApp (
+  { Component, pageProps }: AppProps): JSX.Element {
+
   return (
-    <>
-      <Head>
-        <title>Portfolio</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Head>
+    <ThemeProvider theme={theme}>
       <Component {...pageProps} />
-    </>
+      <GlobalStyles />
+    </ThemeProvider>
   );
 }
