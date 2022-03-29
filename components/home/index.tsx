@@ -1,8 +1,10 @@
-import { Container, TextContainer, InfosContainer, CodeItem, Curved, Divider, TextItem } from './styles';
+import { Container, TextContainer, InfosContainer, CodeItem, TextItem } from './styles';
 import Animation from '../animation'
 import TextLoop from 'react-text-loop/lib/components/TextLoop';
 
 export default function Home() {
+  const NEXT_BASE_PATH = process.env.NEXT_BASE_PATH || ''
+
   const calculateAge = (bornYear: number): number => {
     return new Date().getFullYear() - bornYear;
   }
@@ -26,7 +28,7 @@ export default function Home() {
           </TextContainer>
           <InfosContainer>
             <CodeItem data-aos="zoom-in">
-              <span className="comment">//Meu perfil</span>
+              <span className="comment">{`//Meu perfil`}</span>
               <span className="purple">Profile</span> {'\u007B'}
               <div>
                 Nome: <span className="blue">Bruno Neves</span>,
@@ -48,7 +50,7 @@ export default function Home() {
             </CodeItem>
           </InfosContainer>
         </div>
-        <Animation path={`${process.env.NEXT_BASE_PATH || ''}/web-developer.json`} />
+        <Animation path={`${NEXT_BASE_PATH.concat('/web-developer.json')}`} />
       </Container>
     </>
   );
