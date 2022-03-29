@@ -1,4 +1,4 @@
-import { Container, TextContainer, InfosContainer, CodeItem, Curved, Divider, TextItem } from './styles';
+import { Container, TextContainer, InfosContainer, CodeItem, TextItem } from './styles';
 import Animation from '../animation'
 import TextLoop from 'react-text-loop/lib/components/TextLoop';
 
@@ -26,7 +26,7 @@ export default function Home() {
           </TextContainer>
           <InfosContainer>
             <CodeItem data-aos="zoom-in">
-              <span className="comment">//Meu perfil</span>
+              <span className="comment">{`//Meu perfil`}</span>
               <span className="purple">Profile</span> {'\u007B'}
               <div>
                 Nome: <span className="blue">Bruno Neves</span>,
