@@ -1,14 +1,12 @@
-import Head from 'next/head';
-
-const PREFIX = process.env.NEXT_BASE_PATH || ''
-
+import Footer from '../components/footer';
+import Header from '../components/header';
 
 export default function Home() {
   return (
     <>
-      <main>
-        <h1>Olá Mundo</h1>
-      </main>
+      <Header />
+      
+      <Footer />
     </>
   );
 }
