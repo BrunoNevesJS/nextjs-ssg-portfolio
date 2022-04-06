@@ -56,6 +56,9 @@ export const TextContainer = styled.section`
   h1 {
     font-size: 8rem;
     color: ${({ theme }) => theme.colors.primary};
+    > span {
+      color: white;
+    }
   }
   h2 {
     font-size: 3rem;

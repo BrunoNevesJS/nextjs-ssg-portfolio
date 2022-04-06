@@ -1,7 +1,10 @@
+import Divider from '../components/divider';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import Home from '../components/home';
-import Divider from '../components/divider';
+
+import Home from '../patterns/home';
+import Skills from '../patterns/skills';
+
 
 export default function Main() {
   return (
@@ -9,7 +12,9 @@ export default function Main() {
       <Header />
       <Home />
       <Divider />
-      <div style={{ backgroundColor: 'white', height: 200}} />
+        <Skills />
+        <Divider />
+      <Divider />
       <Footer />
     </>
   );
