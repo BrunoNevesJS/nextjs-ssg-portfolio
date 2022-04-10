@@ -8,11 +8,14 @@ import {
   SiHtml5
 } from 'react-icons/si';
 import Icon from '../../components/icon';
+import { Title } from '../../components/typography'
+import theme from '../../styles/theme/theme';
 import { Container } from './styles';
 
 export default function Skills() {
   return (
     <Container>
+      <Title title="Conhecimentos" color={theme.colors.background} />
       <section>
         <Icon title="HTML" icon={<SiHtml5 />} />
         <Icon title="CSS" icon={<SiCss3 />} />
