@@ -1,15 +1,27 @@
+import { useEffect } from 'react';
+
+import Aos from 'aos';
+import "aos/dist/aos.css";
+
+import Divider from '../components/divider';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import Home from '../components/home';
-import Divider from '../components/divider';
+
+import Home from '../patterns/home';
+import Skills from '../patterns/skills';
+
 
 export default function Main() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
       <Header />
       <Home />
       <Divider />
-      <div style={{ backgroundColor: 'white', height: 200}} />
+      <Skills />
       <Footer />
     </>
   );

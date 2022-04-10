@@ -28,7 +28,7 @@ export default function Animation({ path, autoplay = true, loop = true }: Animat
 
             return () => animation.destroy();
         }
-    }, [lottie]);
+    }, [lottie, autoplay, loop, path]);
 
     return (
         <Wrapper ref={ref} />

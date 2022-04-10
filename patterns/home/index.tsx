@@ -1,5 +1,5 @@
-import { Container, TextContainer, InfosContainer, CodeItem, Curved, Divider, TextItem } from './styles';
-import Animation from '../animation'
+import { Container, TextContainer, InfosContainer, CodeItem, TextItem } from './styles';
+import Animation from '../../components/animation'
 import TextLoop from 'react-text-loop/lib/components/TextLoop';
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <div>
           <TextContainer>
             <TextItem>
-              <h1>Olá</h1>
+              <h1>Olá Mundo<span>,</span></h1>
               <h2>Me chamo Bruno,</h2>
               <h2>Sou {""}
                 <TextLoop>
@@ -26,7 +26,7 @@ export default function Home() {
           </TextContainer>
           <InfosContainer>
             <CodeItem data-aos="zoom-in">
-              <span className="comment">//Meu perfil</span>
+              <span className="comment">{`//Meu perfil`}</span>
               <span className="purple">Profile</span> {'\u007B'}
               <div>
                 Nome: <span className="blue">Bruno Neves</span>,
@@ -35,8 +35,7 @@ export default function Home() {
                 Idade: <span className="blue">{calculateAge(1997)}</span>,
               </div>
               <div>
-                Local: 
-                {'\u007B'}
+                Local: {'\u007B'}
                 <div>
                   Cidade: <span className="blue">Belo Horizonte</span>, <br />
                   Estado: <span className="blue">Minas Gerais</span>, <br />
@@ -48,7 +47,7 @@ export default function Home() {
             </CodeItem>
           </InfosContainer>
         </div>
-        <Animation path={`${process.env.NEXT_BASE_PATH || ''}/web-developer.json`} />
+        <Animation path={`/nextjs-ssg-portfolio/web-developer.json`} />
       </Container>
     </>
   );
