@@ -21,4 +21,7 @@ export const Container = styled.section`
       flex-wrap: wrap;
     }
   }
+  > section:last-child {
+    padding-bottom: 115px;
+  }
 `;
