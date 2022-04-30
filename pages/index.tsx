@@ -9,6 +9,7 @@ import Header from '../components/header';
 
 import Home from '../patterns/home';
 import Skills from '../patterns/skills';
+import Projects from '../patterns/projects';
 
 
 export default function Main() {
@@ -22,7 +23,9 @@ export default function Main() {
       <Home />
       <Divider />
       <Skills />
+      <Projects />
       <Footer />
+      <Divider reverse />
     </>
   );
 }

@@ -15,6 +15,7 @@ export const TitleContainer = styled.h1`
         @media (max-width: 700px) {
         & {
             margin-bottom: 25px;
+            font-size: 2rem;
         }
     }
 `;

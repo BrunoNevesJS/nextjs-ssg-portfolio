@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ reverse?: boolean }>`
   bottom: 0;
   left: 0;
   width: 100%;
@@ -11,7 +11,12 @@ export const Wrapper = styled.div`
     position: relative;
     display: block;
     width: calc(117% + 1.3px);
-    height: 147px
+    height: ${(props) =>
+      props.reverse && '155px'
+    };
+    transform: ${(props) =>
+      props.reverse && 'rotate(180deg)'
+    };
   }
 
   .shape-fill {
