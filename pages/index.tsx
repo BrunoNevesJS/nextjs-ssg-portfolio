@@ -5,11 +5,11 @@ import "aos/dist/aos.css";
 
 import Divider from '../components/divider';
 import Footer from '../components/footer';
-import Header from '../components/header';
 
 import Home from '../patterns/home';
 import Skills from '../patterns/skills';
 import Projects from '../patterns/projects';
+import Charts from '../patterns/charts';
 
 
 export default function Main() {
@@ -19,13 +19,13 @@ export default function Main() {
 
   return (
     <>
-      <Header />
       <Home />
       <Divider />
       <Skills />
+      <Charts />
       <Projects />
-      <Footer />
       <Divider reverse />
+      <Footer />
     </>
   );
 }
